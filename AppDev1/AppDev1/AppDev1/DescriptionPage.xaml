@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDev1.DescriptionPage" 
+             BackgroundImageSource="background">
+    <ListView x:Name="MyListView"
+            ItemsSource="{Binding Items}"
+            CachingStrategy="RecycleElement" SeparatorVisibility="None" HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell IsEnabled="False">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Text="{Binding ProjectType}" 
+                               BackgroundColor="#AAFFFFFF" TextColor="Black" 
+                               Margin="10, 10, 5, 5" Padding="10" 
+                               HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding Days, StringFormat='Duration: {0:#} day(s)'}" 
+                               BackgroundColor="#AAFFFFFF" TextColor="Black" 
+                               Margin="5, 10, 10, 5" Padding="10" 
+                               HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                        <Label Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding Description}" BackgroundColor="#AAFFFFFF" TextColor="Black" Margin="10, 5, 10, 10" Padding="10"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDev1.MainPage"
+             BackgroundImageSource="background"
+             Title="Portfolio">
+    <Grid x:Name="gridMain">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Image Source="profpic.png" Grid.Row="0" ></Image>
+        <Label x:Name="lblContact" Grid.Row="1" TextColor="#000000" BackgroundColor="#66FFFFFF" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
+        <Label x:Name="lblSeeMore" Grid.Row="3" TextColor="#000000" BackgroundColor="#66FFFFFF" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">Klik for at læse mere</Label>
+    </Grid>
+</ContentPage>
